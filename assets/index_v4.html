@@ -39,14 +39,12 @@
         .footer {
             padding: 20px;
             text-align: center;
-            background: #ddd;
             margin-top: 20px;
         }
     </style>
 </head>
 
 <body class="mdui-appbar-with-toolbar">
-
     <div class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
             <a href="https://justin.education/" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: '我的博客'}"><i class=" mdui-icon material-icons">home</i></a>
@@ -61,36 +59,9 @@
                 c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z "></path>
                   </svg>
             </a>
-            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about'}"><i class="mdui-icon material-icons ">more_vert</i></button>
+            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about', history:false}"><i class="mdui-icon material-icons ">more_vert</i></button>
         </div>
     </div>
-
-    <div class="row">
-
-        <div class="area area-title ">
-            <h1>我的网页</h1>
-        </div>
-        <div class="area area-search ">
-            <div class="mdui-container ">
-
-                <div class="mdui-row mdui-valign ">
-                    <div class="mdui-col-xs-10 ">
-                        <div class="mdui-textfield ">
-                            <i class="mdui-icon material-icons ">search</i>
-                            <input id="txtURL" class="mdui-textfield-input " type="text " placeholder="在此輸入以通過 Duckduckgo 搜索 / 輸入地址可直接跳轉 " autofocus />
-                        </div>
-                    </div>
-                    <div class="mdui-col-xs-2 mdui-center">
-                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go Nuts!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="area area-blank">
-
-        </div>
-    </div>
-
     <div id="dialog-about" class="mdui-dialog">
         <div class="mdui-dialog-title">About this website</div>
         <div class="mdui-dialog-content">
@@ -102,10 +73,44 @@
         </div>
     </div>
 
-    <div class="footer ">
-        <h2>底部区域</h2>
+    <div class="row">
+
+        <div class="area area-title ">
+            <h1>JS 反向代理</h1>
+        </div>
+        <div class="area area-search ">
+            <div class="mdui-container">
+
+                <div class="mdui-row mdui-valign ">
+                    <div class="mdui-col-xs-10 ">
+                        <div class="mdui-textfield  mdui-textfield-floating-label">
+                            <i class="mdui-icon material-icons ">search</i>
+                            <label class="mdui-textfield-label">在此輸入以通過 Duckduckgo 搜索 / 輸入地址可直接跳轉 </label>
+                            <input id="txtURL" class="mdui-textfield-input" type="text" autofocus />
+                        </div>
+                    </div>
+                    <div class="mdui-col-xs-2 mdui-center mdui-p-t-3">
+                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go Nuts!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="area area-blank">
+
+        </div>
     </div>
-    <!-- MDUI JavaScript -->
+
+    <div class="box">
+        <span>切换线路:</span>
+        <select id="selNode"></select>
+    </div>
+
+
+
+    <div class="footer ">
+
+    </div>
+    <!-- MDUI JavaScript
     <script>
         const PAGE_CONF_SET = 110
         const PAGE_CONF_GET = 111
