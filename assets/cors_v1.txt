@@ -16,7 +16,7 @@ script.hotjar.com
 # github
 github.githubassets.com
 avatars0.githubusercontent.com
-avatars1.githubusercontent.com
+avatars1.githubusercontent.com 
 avatars2.githubusercontent.com
 avatars3.githubusercontent.com
 
@@ -182,14 +182,3 @@ static.camshowhub-cdn.to
 
 xqimg.imedao.com
 xavatar.imedao.com
-
-# ???
-img-l3.xvideos-cdn.com
-static-egc.xvideos-cdn.com
-img-hw.xvideos-cdn.com
-img-hw.xnxx-cdn.com
-static-egc.xnxx-cdn.com
-di.phncdn.com
-cv.phncdn.com
-roomimg.stream.highwebmedia.com
-w3.cdn.anvato.net
