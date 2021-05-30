@@ -35,7 +35,7 @@
             <span class="mdui-typo-title mdui-ripple">JsProxy - Material</span>
             <select class="mdui-select" id="selNode"></select>
             <div class="mdui-toolbar-spacer "></div>
-            <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: '原項目 Github'}">
+            <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: 'Github'}">
                 <svg version="1.1 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 36 36 " enable-background="new 0 0 36 36 " xml:space="preserve " class="mdui-icon
                 " style="width: 24px;height:24px; ">
                     <path fill-rule="evenodd " clip-rule="evenodd " fill="#000000 " d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5 c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
@@ -43,33 +43,34 @@
                 c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z "></path>
                   </svg>
             </a>
-            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about', history:false}"><i class="mdui-icon material-icons ">more_vert</i></button>
+            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about', history:false}" mdui-tooltip="{content: 'About'}"><i class="mdui-icon material-icons ">more_vert</i></button>
         </div>
     </div>
 
 
 
     <div id="dialog-about" class="mdui-dialog">
-        <div class="mdui-dialog-title">JsProxy</div>
+        <div class="mdui-dialog-title">About:</div>
         <div class="mdui-dialog-content">
             <div class="mdui-container">
-
-                對比原 JSProxy , 我主要改動了這幾個地方: <br>
                 <div class="mdui-list">
-                    <ul>
-                        <li>使用了 MDUI 框架, 讓網站看起來很 Nice</li>
-                        <li>搜索引擎改為 Duckduckgo (Google 要求驗證)</li>
-                        <li>刪掉了巨醜無比的頁面底部網站圖標</li>
-                    </ul>
-
+                    <li class="mdui-list-item mdui-ripple">
+                        <a href="https://www.mdui.org/" class="mdui-list-item-content">Material Design User Interface</a>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">free_breakfast</i>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <a href="https://www.mdui.org/docs/" class="mdui-list-item-content">MDUI Develop Documents</a>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <a href="https://github.com/EtherDream/jsproxy" class="mdui-list-item-content">Original JsProxy</a>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <a href="https://justin.education/" class="mdui-list-item-content">My Personal Blog</a>
+                        <i class="mdui-list-item-icon mdui-icon material-icons">person</i>
+                    </li>
                 </div>
-                <br>相關的網站:
-                <div class="mdui-list">
-                    <a href="#" class="mdui-list-item mdui-ripple">Inbox</a>
-                    <a href="#" class="mdui-list-item mdui-ripple">Starred</a>
-                    <a href="#" class="mdui-list-item mdui-ripple">Send mail</a>
-                </div>
-
             </div>
         </div>
         <div class="mdui-dialog-actions">
