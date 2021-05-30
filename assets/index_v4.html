@@ -9,36 +9,20 @@
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" />
-    <title>Justin‘s Proxy</title>
+    <title>JsProxy</title>
     <link rel="icon" href="__sys__/assets/ico/favicon.png">
     <base target="_blank">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        /* body {
-            font-family: Arial;
-            padding: 10px;
-            background: #f1f1f1;
-        } */
-        /* 头部标题 */
-        
-        .area-title h1 {
-            font-size: 50px;
-            text-align: center;
-        }
-        /* 文章卡片效果 */
-        
         .area {
             background-color: white;
             padding: 20px;
             margin-top: 20px;
         }
-        /* 底部 */
         
         .footer {
             padding: 20px;
             text-align: center;
+            background: #ddd;
             margin-top: 20px;
         }
     </style>
@@ -48,8 +32,8 @@
     <div class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
             <a href="https://justin.education/" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: '我的博客'}"><i class=" mdui-icon material-icons">home</i></a>
-            <span class="mdui-typo-title mdui-ripple">Javascript Web Proxy</span>
-            <select class="mdui-select" id="selNode" mdui-select></select>
+            <span class="mdui-typo-title mdui-ripple">JsProxy - Material</span>
+            <select class="mdui-select" id="selNode"></select>
             <div class="mdui-toolbar-spacer "></div>
             <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-tooltip="{content: '原項目 Github'}">
                 <svg version="1.1 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 36 36 " enable-background="new 0 0 36 36 " xml:space="preserve " class="mdui-icon
@@ -62,10 +46,30 @@
             <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about', history:false}"><i class="mdui-icon material-icons ">more_vert</i></button>
         </div>
     </div>
+
+
+
     <div id="dialog-about" class="mdui-dialog">
-        <div class="mdui-dialog-title">About this website</div>
+        <div class="mdui-dialog-title">JsProxy</div>
         <div class="mdui-dialog-content">
             <div class="mdui-container">
+
+                對比原 JSProxy , 我主要改動了這幾個地方: <br>
+                <div class="mdui-list">
+                    <ul>
+                        <li>使用了 MDUI 框架, 讓網站看起來很 Nice</li>
+                        <li>搜索引擎改為 Duckduckgo (Google 要求驗證)</li>
+                        <li>刪掉了巨醜無比的頁面底部網站圖標</li>
+                    </ul>
+
+                </div>
+                <br>相關的網站:
+                <div class="mdui-list">
+                    <a href="#" class="mdui-list-item mdui-ripple">Inbox</a>
+                    <a href="#" class="mdui-list-item mdui-ripple">Starred</a>
+                    <a href="#" class="mdui-list-item mdui-ripple">Send mail</a>
+                </div>
+
             </div>
         </div>
         <div class="mdui-dialog-actions">
@@ -74,9 +78,14 @@
     </div>
 
     <div class="row">
-
-        <div class="area area-title ">
-            <h1>JS 反向代理</h1>
+        <div class="area"></div>
+        <div class="area"></div>
+        <div class="area area-title">
+            <div class="mdui-container mdui-center">
+                <div class="mdui-typo-display-3">
+                    <center>Web Proxy</center>
+                </div>
+            </div>
         </div>
         <div class="area area-search ">
             <div class="mdui-container">
@@ -85,12 +94,12 @@
                     <div class="mdui-col-xs-10 ">
                         <div class="mdui-textfield  mdui-textfield-floating-label">
                             <i class="mdui-icon material-icons ">search</i>
-                            <label class="mdui-textfield-label">在此輸入以通過 Duckduckgo 搜索 / 輸入地址可直接跳轉 </label>
+                            <label class="mdui-textfield-label">Search or Enter URL: </label>
                             <input id="txtURL" class="mdui-textfield-input" type="text" autofocus />
                         </div>
                     </div>
                     <div class="mdui-col-xs-2 mdui-center mdui-p-t-3">
-                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go Nuts!</button>
+                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go</button>
                     </div>
                 </div>
             </div>
@@ -100,17 +109,6 @@
         </div>
     </div>
 
-    <div class="box">
-        <span>切换线路:</span>
-        <select id="selNode"></select>
-    </div>
-
-
-
-    <div class="footer ">
-
-    </div>
-    <!-- MDUI JavaScript
     <script>
         const PAGE_CONF_SET = 110
         const PAGE_CONF_GET = 111
@@ -158,7 +156,7 @@
 
                 case SW_READY:
                     console.log('sw ready')
-                    showIcons()
+                        // showIcons()
                     sendMsgToSw(PAGE_CONF_GET)
                     break
             }
@@ -203,8 +201,8 @@
                 let [id, url] = v
                 url = url || `www.${id}.com/`
                 return `\
-<a rel="noopener noreferrer " href=./-----https://${url}>\
-<img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
+        <a rel="noopener noreferrer " href=./-----https://${url}>\
+        <img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
             }).join('')
         }
 
@@ -213,6 +211,7 @@
             optEl.id = '--' + id
             optEl.text = text
             optEl.value = id
+            console.log("添加 Node:" + text)
             selNode.appendChild(optEl)
         }
 
