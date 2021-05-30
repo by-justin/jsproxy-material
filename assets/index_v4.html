@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="zh-cmn-Hans">
 
 <head>
@@ -48,10 +49,10 @@
 
     <div class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
-            <a href="https://justin.education/" class="mdui-btn mdui-btn-icon"><i class=" mdui-icon material-icons ">home</i></a>
+            <a href="https://justin.education/" class="mdui-btn mdui-btn-icon"><i class=" mdui-icon material-icons">home</i></a>
             <span class="mdui-typo-title">Javascript Web Proxy</span>
             <div class="mdui-toolbar-spacer "></div>
-            <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon ">
+            <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon">
                 <svg version="1.1 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 36 36 " enable-background="new 0 0 36 36 " xml:space="preserve " class="mdui-icon
                 " style="width: 24px;height:24px; ">
                     <path fill-rule="evenodd " clip-rule="evenodd " fill="#000000 " d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5 c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
@@ -76,19 +77,25 @@
                     <div class="mdui-col-xs-10 ">
                         <div class="mdui-textfield ">
                             <i class="mdui-icon material-icons ">search</i>
-                            <input id="txtURL " class="mdui-textfield-input " type="text " placeholder="在此輸入以通過 Duckduckgo 搜索 / 輸入地址可直接跳轉 " autofocus />
+                            <input id="txtURL" class="mdui-textfield-input " type="text " placeholder="在此輸入以通過 Duckduckgo 搜索 / 輸入地址可直接跳轉 " autofocus />
                         </div>
                     </div>
-                    <div class="mdui-col-xs-2 mdui-center ">
-                        <button id="btnGo " class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go Nuts!</button>
+                    <div class="mdui-col-xs-2 mdui-center">
+                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go Nuts!</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="area area-blank ">
+        <div class="area area-blank">
 
         </div>
     </div>
+
+    <div class="box">
+        <span>切换线路:</span>
+        <select id="selNode"></select>
+    </div>
+    <div class="box" id="list"></div>
 
     <div class="footer ">
         <h2>底部区域</h2>
@@ -218,7 +225,7 @@
             updateSelected()
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js " integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A " crossorigin="anonymous "></script>
 </body>
 
 </html>
