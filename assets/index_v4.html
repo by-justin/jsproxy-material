@@ -45,41 +45,50 @@
                 <button class="mdui-btn" mdui-tooltip="{content: 'Shortcuts'}" mdui-drawer="{target: '#left-drawer'}"><i class=" mdui-icon material-icons">menu</i></button>
                 <span class="mdui-typo-title mdui-hidden-xs-down mdui-ripple">WebProxy</span>
                 <select class="mdui-select" id="selNode"></select>
-                <div class="mdui-toolbar-spacer "></div>
+                <div class="mdui-toolbar-spacer"></div>
                 <a href="https://github.com/etherdream/jsproxy/" class="mdui-btn mdui-btn-icon mdui-hidden-sm-down mdui-ripple" mdui-tooltip="{content: 'Github'}">
-                    <svg version="1.1 " id="Layer_1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 36 36 " enable-background="new 0 0 36 36 " xml:space="preserve " class="mdui-icon
-                " style="width: 24px;height:24px; ">
-                    <path fill-rule="evenodd " clip-rule="evenodd " fill="#000000 " d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5 c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5 c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
                 c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4 c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7 c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
-                c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z "></path>
+                c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path>
                   </svg>
                 </a>
-                <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-dialog="{target: '#dialog-about', history:false}" mdui-tooltip="{content: 'About'}"><i class="mdui-icon material-icons ">more_vert</i></button>
+                <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#menu-options'}" mdui-tooltip="{content: 'More'}"><i class="mdui-icon material-icons">more_vert</i></button>
+                <ul class="mdui-menu" id="menu-options">
+                    <li class="mdui-menu-item">
+                        <a class="mdui-ripple"><i class="mdui-menu-item-icon mdui-icon material-icons">info</i>About</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a class="mdui-ripple" mdui-dialog="{target: '#dialog-links', history:false}"><i class="mdui-menu-item-icon mdui-icon material-icons">link</i>Links</a>
+                    </li>
+                    <li class="mdui-divider"></li>
+                    <li class="mdui-menu-item">
+                        <a href="https://justin.education/" class="mdui-ripple"><i class="mdui-menu-item-icon mdui-icon material-icons">person</i>My Blog</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
-
-
-        <div id="dialog-about" class="mdui-dialog">
-            <div class="mdui-dialog-title">About:</div>
+        <div id="dialog-links" class="mdui-dialog">
+            <div class="mdui-dialog-title">Thanks to:</div>
             <div class="mdui-dialog-content">
                 <div class="mdui-container">
                     <div class="mdui-list">
-                        <li class="mdui-list-item mdui-ripple">
-                            <a href="https://www.mdui.org/" class="mdui-list-item-content">Material Design User Interface</a>
-                            <i class="mdui-list-item-icon mdui-icon material-icons">free_breakfast</i>
-                        </li>
-                        <li class="mdui-list-item mdui-ripple">
-                            <a href="https://www.mdui.org/docs/" class="mdui-list-item-content">MDUI Develop Documents</a>
-                            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
-                        </li>
                         <li class="mdui-list-item mdui-ripple">
                             <a href="https://github.com/EtherDream/jsproxy" class="mdui-list-item-content">JsProxy Project</a>
                             <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
                         </li>
                         <li class="mdui-list-item mdui-ripple">
-                            <a href="https://justin.education/" class="mdui-list-item-content">Justin's Blog</a>
-                            <i class="mdui-list-item-icon mdui-icon material-icons">person</i>
+                            <a href="https://www.mdui.org/" class="mdui-list-item-content">MDUI Library</a>
+                            <i class="mdui-list-item-icon mdui-icon material-icons">free_breakfast</i>
+                        </li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <a href="https://fontawesome.com" class="mdui-list-item-content">Font Awesome</a>
+                            <i class="mdui-list-item-icon mdui-icon material-icons">font_download</i>
+                        </li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <a href="https://cdnjs.com" class="mdui-list-item-content">CDNjs Content Delivery</a>
+                            <i class="mdui-list-item-icon mdui-icon material-icons">cloud</i>
                         </li>
                     </div>
                 </div>
@@ -120,33 +129,34 @@
                     <i class="mdui-list-item-icon mdui-icon fab fa-stack-overflow"></i>
                 </li>
                 <li class="mdui-list-item mdui-ripple">
-                    <a href="/https://www.pinterest.com/ideas/" class=" mdui-list-item-content ">Pinterest</a>
-                    <i class="mdui-list-item-icon mdui-icon fab fa-pinterest "></i>
+                    <a href="/https://www.pinterest.com/ideas/" class=" mdui-list-item-content">Pinterest</a>
+                    <i class="mdui-list-item-icon mdui-icon fab fa-pinterest"></i>
                 </li>
-                <li class="mdui-list-item mdui-ripple ">
-                    <a href="/https://www.apple.com/ " class="mdui-list-item-content ">Apple</a>
-                    <i class="mdui-list-item-icon mdui-icon fab fa-apple "></i>
+                <li class="mdui-list-item mdui-ripple">
+                    <a href="/https://www.apple.com/" class="mdui-list-item-content">Apple</a>
+                    <i class="mdui-list-item-icon mdui-icon fab fa-apple"></i>
                 </li>
             </ul>
         </div>
 
-        <div class="mdui-row mdui-container mdui-center mdui-valign " style="flex-grow: 1; ">
-            <div class="mdui-container ">
-                <div class="mdui-container mdui-m-a-2 mdui-center ">
+        <div class="mdui-row mdui-container mdui-center mdui-valign" style="flex-grow: 1;">
+
+            <div class="mdui-container">
+                <div class="mdui-container mdui-m-a-2 mdui-center">
                     <div class="mdui-typo-display-3">
                         <center>Web Proxy</center>
                     </div>
                 </div>
-                <div class="mdui-container mdui-m-a-2 mdui-valign ">
-                    <div class="mdui-col-xs-10 mdui-container-fluid ">
-                        <div class="mdui-textfield mdui-textfield-floating-label ">
-                            <i class="mdui-icon material-icons ">search</i>
-                            <label class="mdui-textfield-label ">Search or Enter URL: </label>
-                            <input id="txtURL " class="mdui-textfield-input " type="text " autofocus />
+                <div class="mdui-container mdui-m-a-2 mdui-valign">
+                    <div class="mdui-col-xs-10 mdui-container-fluid">
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <i class="mdui-icon material-icons">search</i>
+                            <label class="mdui-textfield-label">Search or Enter URL: </label>
+                            <input id="txtURL" class="mdui-textfield-input" type="text" autofocus />
                         </div>
                     </div>
-                    <div class="mdui-col-xs-2 mdui-container-fluid mdui-center mdui-p-t-3 mdui-hidden-xs-down ">
-                        <button id="btnGo " class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple ">Go</button>
+                    <div class="mdui-col-xs-2 mdui-container-fluid mdui-center mdui-p-t-3 mdui-hidden-xs-down">
+                        <button id="btnGo" class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple">Go</button>
                     </div>
                 </div>
             </div>
@@ -240,31 +250,37 @@
             ['blogger', ''],
         ]
 
+
         function showIcons() {
             list.innerHTML = SITE_LIST.map(v => {
                 let [id, url] = v
                 url = url || `www.${id}.com/`
                 return `\
-        <a rel="noopener noreferrer " href=./-----https://${url}>\
-        <img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
+<a rel="noopener noreferrer" href=./-----https://${url}>\
+<img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
             }).join('')
         }
 
         function addNodeItem(id, text) {
-            const optEl = document.createElement('option') optEl.id = '--' + id optEl.text = text optEl.value = id console.log("添加 Node: " + text) selNode.appendChild(optEl)
+            const optEl = document.createElement('option')
+            optEl.id = '--' + id
+            optEl.text = text
+            optEl.value = id
+            selNode.appendChild(optEl)
         }
+
 
         function updateSelected() {
             const id = conf.node_default
-            const item = document.getElementById('--' + id) if (item) {
+            const item = document.getElementById('--' + id)
+            if (item) {
                 item.selected = true
             } else {
                 console.warn('unknown node:', id)
             }
         }
 
-        function
-        showConf() {
+        function showConf() {
             for (const [id, node] of Object.entries(conf.node_map)) {
                 if (!node.hidden) {
                     addNodeItem(id, node.label)
