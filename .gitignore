@@ -1,5 +1,2 @@
 ._*
-www
-cert
-nginx
-*.sh
+.DS_Store
