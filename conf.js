@@ -79,7 +79,7 @@ jsproxy_config({
     /**
      * 自定义注入页面的 HTML
      */
-    inject_html: '<!-- custom html -->',
+    inject_html: '<button class="mdui-fab mdui-fab-fixed mdui-ripple"><i class="mdui-icon material-icons">add</i></button>',
 
     /**
      * URL 自定义处理（设计中）
