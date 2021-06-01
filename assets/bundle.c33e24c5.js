@@ -75,7 +75,7 @@
     function E(a) {
         const o = a.substr(u),
             i = p(o);
-        if (i) { const e = o.match(/\/-----(https?:\/\/.+)$/); if (e) return r + e[1]; if (c(i.protocol) && r + i.href === a) return }
+        if (i) { const e = o.match(/\/?(https?:\/\/.+)$/); if (e) return r + e[1]; if (c(i.protocol) && r + i.href === a) return }
         const n = a.substr(m).replace(/^-*/, ""),
             t = function(a) {
                 if (!q) {
@@ -254,7 +254,7 @@
             const a = self.__PATH__;
             if (a) return a;
             let o = location.href;
-            const i = o.indexOf("/-----http");
+            const i = o.indexOf("/?http");
             o = -1 === i ? o.replace(/[^\/]+$/, "") : o.substr(0, i);
             return o.replace(/\/*$/, "/")
         }(),
@@ -263,7 +263,7 @@
         s = e + "favicon.ico",
         r = e + "__sys__/helper.js",
         u = e + "__sys__/assets/",
-        m = e + "-----"
+        m = e + "?"
 }, function(a, o, i) {
     "use strict";
     i.d(o, "a", function() { return c }), i.d(o, "b", function() { return p }), i.d(o, "d", function() { return l }), i.d(o, "c", function() { return k }), i.d(o, "e", function() { return h });
@@ -1201,7 +1201,7 @@
             const s = F[n];
             if (s) {
                 const { redir: a, content: o, replace: i } = s;
-                if (a) return Response.redirect("/-----" + a);
+                if (a) return Response.redirect("/?" + a);
                 if (o) return X(o);
                 i && (n = i)
             }
