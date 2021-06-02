@@ -10,9 +10,9 @@
 
 ## Demo
 
-[Demo Site](https://jsproxy.justin.education)
+[Demo Site: jsproxy.justin.education](https://jsproxy.justin.education)
 
-以上站點是我通過 CF-Workers + CF-Pages 搭建的, 牆內訪問速度可以接受.
+以上站點是我通過 CF-Workers + CF-Pages 搭建的, 牆內訪問速度在可接受範圍內.
 
 ## 界面美化
 
@@ -36,7 +36,6 @@
 
 1. 參考[原jsproxy](https://github.com/EtherDream/jsproxy/tree/master/cf-worker), 完成部署
 2. 將 ASSET_URL 改為 `https://github.com/EtherDream/jsproxy/tree/master/cf-worker`
-3. Boom! 配置完成了
+3. Boom! 配置完成了!
 
 當然你也可以 Clone 此 Repo, 代碼在 gh-pages 分支.
-
