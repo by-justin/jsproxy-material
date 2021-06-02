@@ -8,6 +8,12 @@
 
 於是就有了 jsproxy-material.
 
+## Demo
+
+[Demo Site](https://jsproxy.justin.education)
+
+以上站點是我通過 CF-Workers + CF-Pages 搭建的, 牆內訪問速度可以接受.
+
 ## 界面美化
 
 > jsProxy
@@ -17,3 +23,20 @@
 > jsProxy Material
 
 ![jsProxy-material](https://i2.wp.com/justin.education/wp-content/uploads/2021/06/2021060211280928.png?w=1320&ssl=1)
+
+## 功能改進
+
+- Material 設計
+- 將默認搜索引擎改為 Duckduckgo
+- 響應性設計
+- 採用 Fontawesome 字體替代網站圖標
+- 暗黑模式
+
+## 如何部署!
+
+1. 參考[原jsproxy](https://github.com/EtherDream/jsproxy/tree/master/cf-worker), 完成部署
+2. 將 ASSET_URL 改為 `https://github.com/EtherDream/jsproxy/tree/master/cf-worker`
+3. Boom! 配置完成了
+
+當然你也可以 Clone 此 Repo, 代碼在 gh-pages 分支.
+
