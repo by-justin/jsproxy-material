@@ -32,6 +32,9 @@
 - 採用 Fontawesome 字體替代網站圖標
 - 暗黑模式
 
+**關於 jsProxy 不能保存 cookies, 登錄網站之類的問題, 本項目並沒有解決!**
+個人認為 jsProxy 的定位一直是一個 Web2.0 的代理工具, 可以用來看 BBC News, 不適合用來看 Twitter. 因為本人技術有限, 本項目只是改進了原 jsProxy 的體驗, 說白了就是多寫了幾行前端代碼, 並不能解決其餘問題. 如果要尋找可以登錄 telegram、twitter 的代理, 我推薦 [siteProxy](https://github.com/netptop/siteproxy)!
+
 ## 如何部署!
 
 1. 參考[原jsproxy](https://github.com/EtherDream/jsproxy/tree/master/cf-worker), 完成部署
